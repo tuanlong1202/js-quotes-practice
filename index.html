@@ -10,9 +10,33 @@
   <title>Motivation</title>
 </head>
 <body class='container center'>
-  <h1>My favorite quotes:</h1>
-  <div>
+  <div id="modal" class="hidden">
+    <h4>Edit Quote:</h4>
+    <form>
+      <div class="form-group">
+          <label for="edit-quote">Quote</label>
+          <input name="quote" type="text" class="form-control" id="edit_quote" placeholder="Learn. Love. Code">
+      </div>
+      <input type="hidden" id='quote_id' value="">
+      <button type="reset" class="btn" id="cancel-edit">Cancel</button> <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+  </div>
+
+    <h1>My favorite quotes: </h1>
+
+    <div class="toggle_container">
+      <!-- Rounded switch -->
+      <label for="sort">Sort by authtor: </label>
+      <label class="switch">
+        <input type="checkbox" id="sort">
+        <span class="slider round"></span>
+      </label>
+
+    </div>
+  
+    <div>
     <ul id="quote-list">
+
     </ul>
   </div>
   <hr>
